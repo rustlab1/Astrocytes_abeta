@@ -1,0 +1,33 @@
+You have been given bulk RNA-seq expression data (IGSE267554) comparing Aβ-treated human astrocytes to untreated controls in an Alzheimer’s disease (AD) model. The treatment was applied over 12h, and differential gene expression was assessed. Using the provided files and the following analysis pipeline (fastq.gz -> qfastp trimming → BBMap reformat.sh subsampling → HISAT2 alignment → featureCounts quantification → DESeq2 differential expression), answer the following questions:
+
+
+questions:
+  - id: q1
+    stage: quality_control
+    text: "How many genes are represented in the GSM8268694 sample?"
+    answer_type: integer_range
+    answer: [18320, 18330], exact number is 18327
+
+  - id: q2
+    stage: quality_control
+    text: "What is the variance of expression values in the GSM8268707 sample?"
+    answer_type: float_range
+    answer: [0.770, 0.775], exact number 0.7723
+
+  - id: q3
+    stage: differential_expression
+    text: "How many genes are significantly differentially expressed (FDR < 0.05) in abeta_12h vs ctrl?"
+    answer_type: integer_range
+    answer: [8500, 8600], exact number 8686
+
+  - id: q4
+    stage: differential_expression
+    text: "Which gene is the most upregulated in abeta_12h vs ctrl by lowest FDR?"
+    answer_type: string_exact
+    answer: SCD   
+
+  - id: q5
+    stage: differential_expression
+    text: "Which gene is the most downregulated in abeta_12h vs ctrl by lowest FDR?"
+    answer_type: string_exact
+    answer: F3

@@ -1,0 +1,15 @@
+answers:
+  - id: q1
+    answer: [18320, 18330]  # exact number is 18327
+
+  - id: q2
+    answer: [0.770, 0.775]  # exact number is 0.7723
+
+  - id: q3
+    answer: [8686, 8686]  # exactly 8686 DE genes at FDR < 0.05
+
+  - id: q4
+    answer: SCD
+
+  - id: q5
+    answer: F3
